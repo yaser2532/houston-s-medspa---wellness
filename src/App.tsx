@@ -49,7 +49,7 @@ function MedspaWebsite() {
   // React Spring physics for the Back-to-Top floating button
   const backToTopSpring = useSpring({
     opacity: scrollProgress > 0.12 ? 1 : 0,
-    transform: scrollProgress > 0.12 ? 'translateY(0px) scale(1)' : 'translateY(24px) scale(0.75)',
+    transform: scrollProgress > 0.12 ? 'translateY(0) scale(1)' : 'translateY(1.5rem) scale(0.75)',
     pointerEvents: (scrollProgress > 0.12 ? 'auto' : 'none') as any,
     config: { tension: 300, friction: 24 },
   });
@@ -78,7 +78,7 @@ function MedspaWebsite() {
       {/* React Spring Animated Scroll Progress Bar at the very top */}
       <animated.div
         style={scrollSpring}
-        className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#bfa16a] via-[#e2cca4] to-[#bfa16a] z-50 shadow-[0_0_8px_rgba(191,161,106,0.6)] pointer-events-none"
+        className="fixed top-0 left-0 h-[0.1875rem] bg-gradient-to-r from-[#bfa16a] via-[#e2cca4] to-[#bfa16a] z-50 shadow-[0_0_0.5rem_rgba(191,161,106,0.6)] pointer-events-none"
       />
 
       {/* Primary Navigation & Sales Redesign Bar */}

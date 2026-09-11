@@ -16,9 +16,26 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
   font-family: var(--font-sans);
   color: #1a1917;
   background-color: #fbfaf8;
+}
+
+body {
+  min-width: 20rem;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+section[id] {
+  scroll-margin-top: 8rem;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 html.dark {
@@ -83,5 +100,20 @@ html.dark {
   --theme-gold-subtle: #f5eedf;
   --theme-badge-bg: #f3ecdf;
   --theme-badge-text: #8c734b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 

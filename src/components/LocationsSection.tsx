@@ -50,7 +50,7 @@ export const LocationsSection: React.FC<LocationsSectionProps> = ({ onOpenBookin
 
           {/* Location Toggle Tabs */}
           <div
-            className={`mt-8 inline-flex rounded-xl p-1.5 border transition-colors ${
+            className={`mt-8 flex w-full flex-col rounded-xl p-1.5 border transition-colors min-[26rem]:inline-flex min-[26rem]:w-auto min-[26rem]:flex-row ${
               theme === 'dark'
                 ? 'bg-[#23221e] border-[#38352e]'
                 : 'bg-[#e5ded2] border-[#d4cbbe]'
@@ -60,7 +60,7 @@ export const LocationsSection: React.FC<LocationsSectionProps> = ({ onOpenBookin
               <button
                 key={loc.id}
                 onClick={() => setActiveLocationId(loc.id)}
-                className={`px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all flex items-center gap-2 ${
+                className={`w-full px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all flex items-center justify-center gap-2 min-[26rem]:w-auto ${
                   activeLocationId === loc.id
                     ? 'bg-[#bfa16a] text-[#161614] shadow-md font-bold'
                     : theme === 'dark'
@@ -179,7 +179,7 @@ export const LocationsSection: React.FC<LocationsSectionProps> = ({ onOpenBookin
             </div>
 
             {/* Right Column: Google Maps Embed */}
-            <div className={`lg:col-span-7 min-h-[380px] lg:min-h-[460px] relative border-t lg:border-t-0 lg:border-l ${
+            <div className={`lg:col-span-7 min-h-[clamp(20rem,40vw,28.75rem)] relative border-t lg:border-t-0 lg:border-l ${
               theme === 'dark'
                 ? 'bg-[#161614] border-[#33302a]'
                 : 'bg-[#f8f6f2] border-[#ded7c8]'
@@ -189,7 +189,7 @@ export const LocationsSection: React.FC<LocationsSectionProps> = ({ onOpenBookin
                 src={activeLocation.mapEmbedUrl}
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '380px' }}
+                style={{ border: 0, minHeight: 'clamp(20rem, 40vw, 28.75rem)' }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

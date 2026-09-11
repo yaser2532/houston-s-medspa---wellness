@@ -35,7 +35,7 @@ export const SpringScrollProgressBar: React.FC<SpringScrollProgressBarProps> = (
     <div className="fixed top-0 left-0 right-0 h-1 z-50 pointer-events-none bg-black/10 backdrop-blur-xs">
       <animated.div
         style={springProps}
-        className="h-full bg-gradient-to-r from-[#bfa16a] via-[#e5cf92] to-[#d4af37] shadow-[0_0_10px_rgba(191,161,106,0.6)]"
+        className="h-full bg-gradient-to-r from-[#bfa16a] via-[#e5cf92] to-[#d4af37] shadow-[0_0_0.625rem_rgba(191,161,106,0.6)]"
       />
     </div>
   );
@@ -69,7 +69,7 @@ export const SpringScrollReveal: React.FC<SpringScrollRevealProps> = ({
       },
       {
         threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: '0px 0px -3.125rem 0px',
       }
     );
 
@@ -80,16 +80,16 @@ export const SpringScrollReveal: React.FC<SpringScrollRevealProps> = ({
   const getTransform = () => {
     switch (direction) {
       case 'up':
-        return inView ? 'translate3d(0, 0px, 0)' : 'translate3d(0, 36px, 0)';
+        return inView ? 'translate3d(0, 0, 0)' : 'translate3d(0, 2.25rem, 0)';
       case 'down':
-        return inView ? 'translate3d(0, 0px, 0)' : 'translate3d(0, -36px, 0)';
+        return inView ? 'translate3d(0, 0, 0)' : 'translate3d(0, -2.25rem, 0)';
       case 'left':
-        return inView ? 'translate3d(0, 0px, 0)' : 'translate3d(36px, 0, 0)';
+        return inView ? 'translate3d(0, 0, 0)' : 'translate3d(2.25rem, 0, 0)';
       case 'right':
-        return inView ? 'translate3d(0, 0px, 0)' : 'translate3d(-36px, 0, 0)';
+        return inView ? 'translate3d(0, 0, 0)' : 'translate3d(-2.25rem, 0, 0)';
       case 'none':
       default:
-        return 'translate3d(0, 0px, 0)';
+        return 'translate3d(0, 0, 0)';
     }
   };
 
@@ -143,7 +143,7 @@ export const SpringScrollController: React.FC<SpringScrollControllerProps> = ({
 
   // React Spring animation for floating widget appearance and bounce
   const containerSpring = useSpring({
-    transform: visible ? 'translate3d(0, 0px, 0) scale(1)' : 'translate3d(0, 40px, 0) scale(0.85)',
+    transform: visible ? 'translate3d(0, 0, 0) scale(1)' : 'translate3d(0, 2.5rem, 0) scale(0.85)',
     opacity: visible ? 1 : 0,
     pointerEvents: visible ? ('auto' as const) : ('none' as const),
     config: { tension: 260, friction: 22 },

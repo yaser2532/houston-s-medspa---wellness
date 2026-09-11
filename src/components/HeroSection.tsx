@@ -177,7 +177,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
                   : 'border-[#e2dac8] bg-[#ffffff]'
               }`}
             >
-              <div className="relative h-[380px] sm:h-[440px] rounded-lg overflow-hidden group">
+              <div className="relative h-[clamp(20rem,42vw,27.5rem)] rounded-lg overflow-hidden group">
                 <img
                   src={MEDSPA_INFO.heroImg}
                   alt="Houston's Medspa + Wellness Facial & Aesthetic Treatment"

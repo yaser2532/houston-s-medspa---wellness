@@ -49,7 +49,7 @@ export const MembershipOverview: React.FC<MembershipOverviewProps> = ({ onOpenBo
 
           {/* Interactive Mode Toggle */}
           <div
-            className={`mt-6 inline-flex rounded-lg p-1 border ${
+            className={`mt-6 flex w-full flex-col rounded-lg p-1 border min-[26rem]:inline-flex min-[26rem]:w-auto min-[26rem]:flex-row ${
               theme === 'dark'
                 ? 'bg-[#23221f] border-[#38352e]'
                 : 'bg-[#eae4d8] border-[#ded7c8]'
@@ -57,7 +57,7 @@ export const MembershipOverview: React.FC<MembershipOverviewProps> = ({ onOpenBo
           >
             <button
               onClick={() => setActiveTab('perks')}
-              className={`px-4 py-2 rounded-md text-xs font-semibold tracking-wider uppercase transition-all ${
+              className={`w-full px-4 py-2 rounded-md text-xs font-semibold tracking-wider uppercase transition-all min-[26rem]:w-auto ${
                 activeTab === 'perks'
                   ? 'bg-[#bfa16a] text-[#161614] shadow-sm'
                   : theme === 'dark'
@@ -69,7 +69,7 @@ export const MembershipOverview: React.FC<MembershipOverviewProps> = ({ onOpenBo
             </button>
             <button
               onClick={() => setActiveTab('how-tokens-work')}
-              className={`px-4 py-2 rounded-md text-xs font-semibold tracking-wider uppercase transition-all ${
+              className={`w-full px-4 py-2 rounded-md text-xs font-semibold tracking-wider uppercase transition-all min-[26rem]:w-auto ${
                 activeTab === 'how-tokens-work'
                   ? 'bg-[#bfa16a] text-[#161614] shadow-sm'
                   : theme === 'dark'
@@ -248,7 +248,7 @@ export const MembershipOverview: React.FC<MembershipOverviewProps> = ({ onOpenBo
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             
             {/* Left: Video / Media Preview */}
-            <div className="lg:col-span-5 relative bg-[#1d1c19] min-h-[320px] flex items-center justify-center overflow-hidden">
+            <div className="lg:col-span-5 relative bg-[#1d1c19] min-h-[clamp(20rem,35vw,25rem)] flex items-center justify-center overflow-hidden">
               <video
                 autoPlay
                 muted
