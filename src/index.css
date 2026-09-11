@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-brand-gold: #bfa16a;
+  --color-brand-gold-dark: #9c7e46;
+  --color-brand-gold-light: #f5eedf;
+  --color-brand-dark: #161614;
+  --color-brand-charcoal: #23221f;
+  --color-brand-sand: #f8f6f2;
+  --color-brand-cream: #fbfaf8;
+  --color-brand-border: #e8e3d8;
+  --color-brand-muted: #736f66;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: #1a1917;
+  background-color: #fbfaf8;
+}
+
+html.dark {
+  background-color: #121210;
+  color: #fbfaf8;
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+::selection {
+  background-color: #e8d7b8;
+  color: #1a1917;
+}
+
+/* website-template class for light and dark theme toggling */
+.website-template {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  width: 100%;
+}
+
+.website-template.dark-theme,
+.website-template.dark {
+  background-color: #121210;
+  color: #fbfaf8;
+  --theme-bg-main: #121210;
+  --theme-bg-surface: #1a1917;
+  --theme-bg-card: #1f1e1b;
+  --theme-bg-elevated: #24231f;
+  --theme-text-main: #fbfaf8;
+  --theme-text-sub: #b8b4a7;
+  --theme-text-muted: #8c887d;
+  --theme-border: #2d2b27;
+  --theme-border-subtle: #23221f;
+  --theme-gold: #bfa16a;
+  --theme-gold-subtle: #2d281e;
+  --theme-badge-bg: #262420;
+  --theme-badge-text: #d8c5a2;
+}
+
+.website-template.light-theme,
+.website-template.light {
+  background-color: #fbfaf8;
+  color: #1a1917;
+  --theme-bg-main: #fbfaf8;
+  --theme-bg-surface: #ffffff;
+  --theme-bg-card: #ffffff;
+  --theme-bg-elevated: #f4eee3;
+  --theme-text-main: #161614;
+  --theme-text-sub: #555148;
+  --theme-text-muted: #736e63;
+  --theme-border: #e8e3d8;
+  --theme-border-subtle: #f0ebe1;
+  --theme-gold: #9c7e46;
+  --theme-gold-subtle: #f5eedf;
+  --theme-badge-bg: #f3ecdf;
+  --theme-badge-text: #8c734b;
+}
+

@@ -1,0 +1,7 @@
+{
+  "name": "Houston's Medspa + Wellness",
+  "description": "Modern luxury redesign preview for Houston's Medspa + Wellness memberships, medical aesthetics, and locations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
